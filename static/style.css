@@ -67,3 +67,93 @@ h1 {
     color: #666;
     font-size: 0.8em;
 }
+
+.dark-mode-toggle {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-toggle label {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 4px;
+    left: 4px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked + label {
+    background-color: #2b2b2b;
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked + label:after {
+    transform: translateX(26px);
+}
+
+.dark-mode-toggle label:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    top: 11px;
+    left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked + label:before {
+    background-color: #f2f2f2;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .container {
+    background-color: #444;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    color: #fff;
+}
+
+.dark-mode h1 {
+    color: #fff;
+}
+
+.dark-mode .server {
+    background-color: #555;
+    border-color: #333;
+}
+
+.dark-mode .server-name {
+    color: #fff;
+}
+
+.dark-mode .server-status {
+    color: #ccc;
+}
+
