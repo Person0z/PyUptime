@@ -12,7 +12,7 @@ server_status = {}
 
 async def check_servers():
     # Read list of servers from JSON file
-    with open('servers.json', 'r') as f:
+    with open('static/data/servers.json', 'r') as f:
         servers = json.load(f)
 
     # aiohttp works best with a session for multiple requests
